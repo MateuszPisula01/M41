@@ -14,8 +14,8 @@ class Main {
   public static void main(String[] args) {
     try {
       Service s = new Service();
-      s.addStudent(new Student("Krzysztof", 20));
-      s.addStudent(new Student("Janusz", 40));
+      s.addStudent(new Student("Krzysztof","Adam", 20, "Kowaliowa"));
+      s.addStudent(new Student("Janusz","Mari", 40,"Marszalke"));
 
       var scanner = new Scanner(System.in);
       System.out.println("Czy chcesz dodać nowego studenta do bazy? (tak/nie)");
@@ -24,20 +24,25 @@ class Main {
       if (input.equalsIgnoreCase("tak")) {
         System.out.println("Podaj imię nowego studenta:");
         String name = scanner.nextLine();
+         System.out.println("Podaj nazwisko nowego studenta:");
+        String surname = scanner.nextLine();
         System.out.println("Podaj wiek nowego studenta:");
         int age = Integer.parseInt(scanner.nextLine());
-        System.out.println("Podaj dodatkowe informace:");
-        String info = scanner.nextLine();
+        System.out.println("Podaj ulice, na ktorej mieszka studenta:");
+        String street = scanner.nextLine();
+         
 
-        s.addStudent(new Student(name, age ));
+        s.addStudent(new Student(name, surname,age , street));
       }
 
       System.out.println("Czy chcesz wyświetlić listę studentów? (tak/nie)");
       input = scanner.nextLine();
 
-      if (input.equalsIgnoreCase("tak")) {
+      if (input.equalsIgnoreCase("tak")) 
+      {
         var students = s.getStudents();
-        for(Student current : students) {
+        for(Student current : students) 
+        {
           System.out.println(current.ToString());
         }
       }

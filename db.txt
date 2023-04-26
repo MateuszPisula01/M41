@@ -1,13 +1,11 @@
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Bartok 65
-Krzysztof 20
-Janusz 40
+Marcin Wyrostek 43 Bandoneo
+Janusz Mari 40 Marszalke
+Adam Kowalski 45 tetrr
+Krzysztof Adam 20 Kowaliowa
+Janusz Mari 40 Marszalke
+marek dsds 25 tetetete
+Krzysztof Adam 20 Kowaliowa
+Janusz Mari 40 Marszalke
+Krzysztof Adam 20 Kowaliowa
+Janusz Mari 40 Marszalke
+Mateusz Pisula 45 TorT

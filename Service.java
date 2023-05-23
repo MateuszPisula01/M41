@@ -1,36 +1,42 @@
-import java.util.Collection;
+import java.io.*;
 import java.util.ArrayList;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.util.List;
+
 public class Service {
+  private static final String DATABASE_FILE = "db.txt";
 
   public void addStudent(Student student) throws IOException {
-    var f = new FileWriter("db.txt", true);
-    var b = new BufferedWriter(f);
-    b.append(student.ToString());
-    b.newLine();
-    b.close();
-  }
-
-  public Collection<Student> getStudents() throws IOException {
-    var ret = new ArrayList<Student>();
-    var f = new FileReader("db.txt");
-    var reader = new BufferedReader(f);
-    String line = "";
-    while (true) {
-      line = reader.readLine();
-      if(line == null)
-        break;
-      ret.add(Student.Parse(line));
+    String studentData = student.getName() + " " + student.getSurname() + " " + student.getAge() + " " +
+        student.getStreet() + " " + student.getBirthDate();
+    try (PrintWriter writer = new PrintWriter(new FileWriter(DATABASE_FILE, true))) {
+      writer.println(studentData);
     }
-    reader.close();
-    return ret;
   }
 
-  public Student findStudentByName(String name) {
-    return null;
+  public List<Student> getStudents() throws IOException {
+    List<Student> students = new ArrayList<>();
+    try (BufferedReader reader = new BufferedReader(new FileReader(DATABASE_FILE))) {
+      String line;
+      while ((line = reader.readLine()) != null) {
+        Student student = Student.parse(line);
+        students.add(student);
+      }
+    }
+    return students;
   }
+
+  public List<Student> findStudentByName(String name) throws IOException {
+  List<Student> matchingStudents = new ArrayList<>();
+  try (BufferedReader reader = new BufferedReader(new FileReader(DATABASE_FILE))) {
+    String line;
+    while ((line = reader.readLine()) != null) {
+      Student student = Student.parse(line);
+      if (student.getName().equalsIgnoreCase(name)) {
+        matchingStudents.add(student);
+      }
+    }
+  }
+  return matchingStudents;
+}
+
 }

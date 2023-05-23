@@ -1,11 +1,8 @@
-Marcin Wyrostek 43 Bandoneo
-Janusz Mari 40 Marszalke
-Adam Kowalski 45 tetrr
-Krzysztof Adam 20 Kowaliowa
-Janusz Mari 40 Marszalke
-marek dsds 25 tetetete
-Krzysztof Adam 20 Kowaliowa
-Janusz Mari 40 Marszalke
-Krzysztof Adam 20 Kowaliowa
-Janusz Mari 40 Marszalke
-Mateusz Pisula 45 TorT
+Krzysztof Adam 20 Kowaliowa 1990-05-15
+Janusz Mari 40 Marszalke 1980-10-20
+Krzysztof Adam 20 Kowaliowa 1990-05-15
+Janusz Mari 40 Marszalke 1980-10-20
+Krzysztof Adam 20 Kowaliowa 1990-05-15
+Janusz Mari 40 Marszalke 1980-10-20
+Krzysztof Adam 20 Kowaliowa 1990-05-15
+Janusz Mari 40 Marszalke 1980-10-20
